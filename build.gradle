@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'http://repo.spring.io/plugins-release' }
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath("org.springframework.build.gradle:propdeps-plugin:0.0.7")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'propdeps'
+
+jar {
+    baseName = 'google-codejam'
+    version = '1.0.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+    compile('commons-io:commons-io:2.4')
+    compile('junit:junit:4.12')
+
+    provided("org.projectlombok:lombok:1.16.2")
+}
