@@ -5,8 +5,8 @@ package com.izeye.codejam.util;
  */
 public class NumberUtils {
 
-	public static char int2Char(int i) {
-		return (char) (i + '0');
+	public static char digit2Char(int digit) {
+		return (char) (digit + '0');
 	}
 
 }

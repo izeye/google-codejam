@@ -27,24 +27,24 @@ public class Africa2010QrCProblemSolver extends AbstractProblemSolver {
 		return line2KeyPresses(br.readLine());
 	}
 
-	private Map<Integer, String> number2Chars = new HashMap<>();
+	private Map<Integer, String> digit2Chars = new HashMap<>();
 	private Map<Character, String> char2KeyPresses = new HashMap<>();
 	{
-		number2Chars.put(2, "abc");
-		number2Chars.put(3, "def");
-		number2Chars.put(4, "ghi");
-		number2Chars.put(5, "jkl");
-		number2Chars.put(6, "mno");
-		number2Chars.put(7, "pqrs");
-		number2Chars.put(8, "tuv");
-		number2Chars.put(9, "wxyz");
-		number2Chars.put(0, " ");
-		for (Map.Entry<Integer, String> entry : number2Chars.entrySet()) {
-			Integer number = entry.getKey();
+		digit2Chars.put(2, "abc");
+		digit2Chars.put(3, "def");
+		digit2Chars.put(4, "ghi");
+		digit2Chars.put(5, "jkl");
+		digit2Chars.put(6, "mno");
+		digit2Chars.put(7, "pqrs");
+		digit2Chars.put(8, "tuv");
+		digit2Chars.put(9, "wxyz");
+		digit2Chars.put(0, " ");
+		for (Map.Entry<Integer, String> entry : digit2Chars.entrySet()) {
+			Integer digit = entry.getKey();
 			String characters = entry.getValue();
 			for (int i = 0; i < characters.length(); i++) {
 				char c = characters.charAt(i);
-				char2KeyPresses.put(c, StringUtils.repeat(NumberUtils.int2Char(number), i + 1));
+				char2KeyPresses.put(c, StringUtils.repeat(NumberUtils.digit2Char(digit), i + 1));
 			}
 		}
 	}
