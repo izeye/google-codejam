@@ -1,17 +1,12 @@
 package com.izeye.codejam.africa2010.qr.b;
 
 import com.izeye.codejam.common.AbstractProblemSolver;
-import com.izeye.codejam.util.ArrayUtils;
 import com.sun.deploy.util.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
 
 /**
  * Created by izeye on 15. 3. 13..
@@ -29,7 +24,8 @@ public class Africa2010QrBProblemSolver extends AbstractProblemSolver {
 	@Override
 	protected String solveTestCase(BufferedReader br) throws IOException {
 		String[] words = br.readLine().split(" ");
-		return StringUtils.join(Arrays.asList(ArrayUtils.reverse(words)), " ");
+		ArrayUtils.reverse(words);
+		return StringUtils.join(Arrays.asList(words), " ");
 	}
 
 }
