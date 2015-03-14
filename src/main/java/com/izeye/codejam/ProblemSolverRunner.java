@@ -3,6 +3,7 @@ package com.izeye.codejam;
 import com.izeye.codejam.africa2010.qr.a.Africa2010QrAProblemSolver;
 import com.izeye.codejam.africa2010.qr.b.Africa2010QrBProblemSolver;
 import com.izeye.codejam.africa2010.qr.c.Africa2010QrCProblemSolver;
+import com.izeye.codejam.codejam2009.qr.a.CodeJam2009QrAProblemSolver;
 import com.izeye.codejam.common.ProblemSolver;
 import org.apache.commons.io.IOUtils;
 import org.junit.BeforeClass;
@@ -21,7 +22,8 @@ public class ProblemSolverRunner {
 
 //	static ProblemSolver problemSolver = new Africa2010QrAProblemSolver();
 //	static ProblemSolver problemSolver = new Africa2010QrBProblemSolver();
-	static ProblemSolver problemSolver = new Africa2010QrCProblemSolver();
+//	static ProblemSolver problemSolver = new Africa2010QrCProblemSolver();
+	static ProblemSolver problemSolver = new CodeJam2009QrAProblemSolver();
 
 	static String sampleDirectory;
 	static String inputDirectory;

@@ -64,7 +64,7 @@ public abstract class AbstractProblemSolver implements ProblemSolver {
 		return output;
 	}
 
-	private String solveTestCases(BufferedReader br) throws IOException {
+	protected String solveTestCases(BufferedReader br) throws IOException {
 		StringBuilder sbOutput = new StringBuilder();
 		int testCaseCount = Integer.parseInt(br.readLine());
 		for (int testCase = 1; testCase <= testCaseCount; testCase++) {
