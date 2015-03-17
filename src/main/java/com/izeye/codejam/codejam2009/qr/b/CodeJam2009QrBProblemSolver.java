@@ -16,6 +16,11 @@ public class CodeJam2009QrBProblemSolver extends AbstractProblemSolver {
 	private static final String SMALL_INPUT_FILENAME = "B-small-practice.in";
 	private static final String LARGE_INPUT_FILENAME = "B-large-practice.in";
 
+	private static final int NORTH = 0;
+	private static final int WEST = 1;
+	private static final int EAST = 2;
+	private static final int SOUTH = 3;
+
 	public CodeJam2009QrBProblemSolver() {
 		super(DIRECTORY, SMALL_INPUT_FILENAME, LARGE_INPUT_FILENAME);
 	}
@@ -103,6 +108,7 @@ public class CodeJam2009QrBProblemSolver extends AbstractProblemSolver {
 		return Integer.MAX_VALUE;
 	}
 
+	@Override
 	protected String solveTestCases(BufferedReader br) throws IOException {
 		StringBuilder sbOutput = new StringBuilder();
 		int testCaseCount = Integer.parseInt(br.readLine());
@@ -111,10 +117,5 @@ public class CodeJam2009QrBProblemSolver extends AbstractProblemSolver {
 		}
 		return sbOutput.toString().trim();
 	}
-
-	private static final int NORTH = 0;
-	private static final int WEST = 1;
-	private static final int EAST = 2;
-	private static final int SOUTH = 3;
 
 }

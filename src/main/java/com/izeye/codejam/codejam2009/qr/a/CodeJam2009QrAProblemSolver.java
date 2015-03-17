@@ -25,6 +25,22 @@ public class CodeJam2009QrAProblemSolver extends AbstractProblemSolver {
 	}
 
 	@Override
+	protected String solveTestCase(BufferedReader br) throws IOException {
+		int matchedCount = 0;
+		String pattern = br.readLine();
+		String regex = pattern.replace('(', '[').replace(')', ']');
+		Pattern regexPattern = Pattern.compile(regex);
+		Iterator<String> it = words.iterator();
+		while (it.hasNext()) {
+			String word = it.next();
+			if (regexPattern.matcher(word).matches()) {
+				matchedCount++;
+			}
+		}
+		return String.valueOf(matchedCount);
+	}
+
+	@Override
 	protected String solveTestCases(BufferedReader br) throws IOException {
 		StringBuilder sbOutput = new StringBuilder();
 		String line = br.readLine();
@@ -39,22 +55,6 @@ public class CodeJam2009QrAProblemSolver extends AbstractProblemSolver {
 			sbOutput.append(String.format("Case #%d: %s\n", testCase, solveTestCase(br)));
 		}
 		return sbOutput.toString().trim();
-	}
-
-	@Override
-	protected String solveTestCase(BufferedReader br) throws IOException {
-		int matchedCount = 0;
-		String pattern = br.readLine();
-		String regex = pattern.replace('(', '[').replace(')', ']');
-		Pattern regexPattern = Pattern.compile(regex);
-		Iterator<String> it = words.iterator();
-		while (it.hasNext()) {
-			String word = it.next();
-			if (regexPattern.matcher(word).matches()) {
-				matchedCount++;
-			}
-		}
-		return String.valueOf(matchedCount);
 	}
 
 }
