@@ -69,11 +69,16 @@ public abstract class AbstractProblemSolver implements ProblemSolver {
 		int testCaseCount = Integer.parseInt(br.readLine());
 		for (int testCase = 1; testCase <= testCaseCount; testCase++) {
 			System.out.println("Trying to solve test case #" + testCase + "...");
-			sbOutput.append(String.format("Case #%d: %s\n", testCase, solveTestCase(br)));
+			sbOutput.append(String.format("Case #%d:%c%s\n",
+					testCase, getTestResultHeaderDelimiter(), solveTestCase(br)));
 		}
 		return sbOutput.toString().trim();
 	}
 
 	protected abstract String solveTestCase(BufferedReader br) throws IOException;
+
+	protected char getTestResultHeaderDelimiter() {
+		return ' ';
+	}
 
 }

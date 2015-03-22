@@ -109,13 +109,8 @@ public class CodeJam2009QrBProblemSolver extends AbstractProblemSolver {
 	}
 
 	@Override
-	protected String solveTestCases(BufferedReader br) throws IOException {
-		StringBuilder sbOutput = new StringBuilder();
-		int testCaseCount = Integer.parseInt(br.readLine());
-		for (int testCase = 1; testCase <= testCaseCount; testCase++) {
-			sbOutput.append(String.format("Case #%d:\n%s\n", testCase, solveTestCase(br)));
-		}
-		return sbOutput.toString().trim();
+	protected char getTestResultHeaderDelimiter() {
+		return '\n';
 	}
 
 }
