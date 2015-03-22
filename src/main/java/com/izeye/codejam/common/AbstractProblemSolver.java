@@ -68,6 +68,7 @@ public abstract class AbstractProblemSolver implements ProblemSolver {
 		StringBuilder sbOutput = new StringBuilder();
 		int testCaseCount = Integer.parseInt(br.readLine());
 		for (int testCase = 1; testCase <= testCaseCount; testCase++) {
+			System.out.println("Trying to solve test case #" + testCase + "...");
 			sbOutput.append(String.format("Case #%d: %s\n", testCase, solveTestCase(br)));
 		}
 		return sbOutput.toString().trim();
