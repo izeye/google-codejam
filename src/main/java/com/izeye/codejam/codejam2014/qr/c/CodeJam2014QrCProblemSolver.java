@@ -145,6 +145,10 @@ public class CodeJam2014QrCProblemSolver extends AbstractProblemSolver {
 		if (value != null && value == MINE) {
 			return false;
 		}
+		
+		// FIXME:
+		// I did this to eliminate code duplication
+		// but making side effects in getters is not good.
 		if (value == null) {
 			cellsToBeExpanded.add(new Cell(row, column));
 		}
