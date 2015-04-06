@@ -8,6 +8,7 @@ import com.izeye.codejam.codejam2009.qr.b.CodeJam2009QrBProblemSolver;
 import com.izeye.codejam.codejam2009.qr.c.CodeJam2009QrCProblemSolver;
 import com.izeye.codejam.codejam2014.qr.a.CodeJam2014QrAProblemSolver;
 import com.izeye.codejam.codejam2014.qr.b.CodeJam2014QrBProblemSolver;
+import com.izeye.codejam.codejam2014.qr.c.CodeJam2014QrCProblemSolver;
 import com.izeye.codejam.common.ProblemSolver;
 import org.apache.commons.io.IOUtils;
 import org.junit.BeforeClass;
@@ -31,7 +32,8 @@ public class ProblemSolverRunner {
 //	static ProblemSolver problemSolver = new CodeJam2009QrBProblemSolver();
 //	static ProblemSolver problemSolver = new CodeJam2009QrCProblemSolver();
 //	static ProblemSolver problemSolver = new CodeJam2014QrAProblemSolver();
-	static ProblemSolver problemSolver = new CodeJam2014QrBProblemSolver();
+//	static ProblemSolver problemSolver = new CodeJam2014QrBProblemSolver();
+	static ProblemSolver problemSolver = new CodeJam2014QrCProblemSolver();
 
 	static String sampleDirectory;
 	static String inputDirectory;
